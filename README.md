@@ -108,29 +108,29 @@ The notebooks are pretty much standalone, so you can just download any of them a
 
 This is a list of the version packages used during implementation. A requirement.txt is provided.
 
-* pip
+* Requirements installation through pip
   ```sh
   python -m install -r requirements.txt
   ```
 
-* Keras==2.4.3
-* livelossplot==0.5.3
-* matplotlib==3.1.1
-* numpy==1.18.5
-* opencv-python==4.1.2.30
-* pandas==0.25.3
-* qiskit==0.21.0
-* qiskit-aer==0.6.1
-* qiskit-aqua==0.7.5
-* qiskit-ibmq-provider==0.9.0
-* qiskit-ignis==0.4.0
-* qiskit-terra==0.15.2
-* scikit-learn==0.23.2
-* scipy==1.4.1
-* seaborn==0.9.0
-* tensorboard==2.3.0
-* tensorflow==2.3.1
-* tqdm==4.41.1
+  * Keras==2.4.3
+  * livelossplot==0.5.3
+  * matplotlib==3.1.1
+  * numpy==1.18.5
+  * opencv-python==4.1.2.30
+  * pandas==0.25.3
+  * qiskit==0.21.0
+  * qiskit-aer==0.6.1
+  * qiskit-aqua==0.7.5
+  * qiskit-ibmq-provider==0.9.0
+  * qiskit-ignis==0.4.0
+  * qiskit-terra==0.15.2
+  * scikit-learn==0.23.2
+  * scipy==1.4.1
+  * seaborn==0.9.0
+  * tensorboard==2.3.0
+  * tensorflow==2.3.1
+  * tqdm==4.41.1
 
 <!-->
 ### Installation
