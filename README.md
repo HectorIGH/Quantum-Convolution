@@ -31,10 +31,10 @@
     <img src="README_images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Multi channel Image classification via QML</h3>
+  <h3 align="center">Qonvolution: A Quantum Convolution</h3>
 
   <p align="center">
-    A QML extended model for binary multi channel image classification.
+    A Quantum convolution as a first layer intended for feature extraction.
     <br />
     <a href="https://github.com/HectorIGH/Quantum-Convolution"><strong>Explore the docs »</strong></a>
     <br />
@@ -82,11 +82,16 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://hectorigh.github.io/)
 
-The base binary model is preserved, but allong with the training procedure are extended and modified, in order to generalize to a new model capable of process images of arbitrary number of channels. In this case RBG images are used.
+There are two base models. 
+
+One is intended to be optimized by Tensorflow. A custom layer is built and custom training and evaluation  loops are created, then the model is optimized. Ideally, Tensorflow would optimize the parameters in the quantum circuit, nevertheless when extracting the numpy array representation from the tensor in order to execute the quantum circuit, the ability of that tensor to be optimized is lost. This model is found in _this [Notebook](https://github.com/HectorIGH/Quantum-Convolution/blob/main/Custom%20Training%20%26%20GradientTape%20for%20Qonv2D%20Initial%20Layer.ipynb)_.
+
+The second model is a compromise with the optimization incapability. Instead, a random set of filters is generated and applied to the original dataset, obtaining the first convolution. Since performing the quantum convolution on the fly is quite slow, the output images are saved into an npy file, which is then loaded and used as the input to a subsecuent classical convnet model. For comparison reasons, a classical model, different only in the first convolution, is implemented. This model can be found in _this [Notebook](https://github.com/HectorIGH/Quantum-Convolution/blob/main/CONVNET%20with%20Quonvolution%20Preprocess.ipynb)_.
+
 
 ### Built With
 
-The model is built in Python and Qiskit for quantum processing, OpenCV for image preprocessing and Matplotlib and Seaborn for graphical representation. Default to simulating, but able to upload to a real quantum machine.
+The model is built in Python and Qiskit for quantum processing. Tensorflow is used for model creation and optimization purposes.
 
 * [Python](https://www.python.org/)
 * [Qiskit](https://qiskit.org/)
